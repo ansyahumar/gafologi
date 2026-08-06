@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sertifikasi Grafologi CHA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: #F4F0EA;
+            color: #121212;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 30px 16px;
+        }
+
+        .main-container {
+            max-width: 900px;
+            width: 100%;
+            background: #FFFFFF;
+            border: 3px solid #121212;
+            border-radius: 20px;
+            padding: 48px 36px;
+            box-shadow: 8px 8px 0px #121212;
+            text-align: center;
+        }
+
+        .tag-pill {
+            display: inline-block;
+            background: #FFE600;
+            border: 2px solid #121212;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            box-shadow: 3px 3px 0px #121212;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 800;
+            line-height: 1.25;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        h1 span {
+            background: #D2F583;
+            padding: 0 8px;
+            border: 2px solid #121212;
+            border-radius: 8px;
+            display: inline-block;
+        }
+
+        p.description {
+            font-size: 1.05rem;
+            color: #4A4A4A;
+            max-width: 620px;
+            margin: 0 auto 36px;
+            line-height: 1.6;
+        }
+
+        .grid-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .feature-card {
+            background: #F9F8F6;
+            border: 2.5px solid #121212;
+            border-radius: 14px;
+            padding: 24px;
+            box-shadow: 4px 4px 0px #121212;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .feature-card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px #121212;
+        }
+
+        .icon-box {
+            width: 44px;
+            height: 44px;
+            background: #FFC0CB;
+            border: 2px solid #121212;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+            box-shadow: 2px 2px 0px #121212;
+        }
+
+        .card-2 .icon-box { background: #A3E8FF; }
+        .card-3 .icon-box { background: #D2F583; }
+
+        .feature-card h3 {
+            font-size: 1.1rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background: #121212;
+            color: #FFFFFF;
+            font-size: 1.05rem;
+            font-weight: 700;
+            padding: 16px 36px;
+            border-radius: 50px;
+            text-decoration: none;
+            border: 2.5px solid #121212;
+            box-shadow: 4px 4px 0px #FFE600;
+            transition: all 0.15s ease;
+            margin-bottom: 48px;
+        }
+
+        .btn-cta:hover {
+            background: #FFE600;
+            color: #121212;
+            box-shadow: 6px 6px 0px #121212;
+        }
+
+        /* Dokumentasi AI Section */
+        .ai-doc-section {
+            border-top: 2.5px dashed #121212;
+            padding-top: 36px;
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        .ai-doc-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: #121212;
+            margin-bottom: 20px;
+        }
+
+        .doc-block {
+            margin-bottom: 20px;
+            background: #F9F8F6;
+            border: 2px solid #121212;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 3px 3px 0px #121212;
+        }
+
+        .doc-block-title {
+            font-size: 1rem;
+            font-weight: 800;
+            color: #121212;
+            margin-bottom: 10px;
+        }
+
+        .doc-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .doc-list li {
+            font-size: 0.9rem;
+            color: #333;
+            margin-bottom: 8px;
+            line-height: 1.5;
+            position: relative;
+            padding-left: 18px;
+        }
+
+        .doc-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .doc-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #121212;
+            font-weight: 800;
+        }
+
+        @media (max-width: 600px) {
+            .main-container { padding: 32px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="main-container">
+        <div class="tag-pill">COMPREHENSIVE COURSE</div>
+        
+        <h1>
+            Jadilah Profesional yang Mampu <br>
+            Melihat Lebih Dalam dengan <span>Grafologi</span>
+        </h1>
+
+        <p class="description">
+            Pelajari seni dan sains analisis tulisan tangan untuk memahami karakter manusia secara presisi. Perkuat karir Anda dengan sertifikasi internasional <strong>Certified Handwriting Analyst (CHA)</strong>.
+        </p>
+
+        <div class="grid-features">
+            <div class="feature-card">
+                <div class="icon-box">100+</div>
+                <h3>Kuasai 100+ Traits</h3>
+                <p>Pelajari indikator kepribadian komprehensif yang digunakan dalam analisis grafologi profesional.</p>
+            </div>
+
+            <div class="feature-card card-2">
+                <div class="icon-box">CHA</div>
+                <h3>Sertifikasi Resmi</h3>
+                <p>Raih gelar internasional Certified Handwriting Analyst untuk membuktikan kompetensi Anda.</p>
+            </div>
+
+            <div class="feature-card card-3">
+                <div class="icon-box">★</div>
+                <h3>Keunggulan Karir</h3>
+                <p>Miliki keahlian bernilai tinggi yang membedakan Anda di bidang HR, psikologi, dan konseling.</p>
+            </div>
+        </div>
+
+        <a href="#daftar" class="btn-cta">Daftar Sertifikasi Sekarang →</a>
+
+        <!-- Dokumentasi AI -->
+        <section class="ai-doc-section">
+            <h2 class="ai-doc-title">Penjelasan</h2>
+
+            <div class="doc-block">
+                <h3 class="doc-block-title">1. Bagian yang Dibantu AI:</h3>
+                <ul class="doc-list">
+                    <li><strong>Generasi Kode Dasar (Boilerplate):</strong> Pembuatan struktur HTML awal, pengorganisasian kelas CSS, dan penerapan variabel CSS (<code>:root</code>) untuk mempermudah pengaturan tema.</li>
+                    <li><strong>Eksplorasi Konsep & Pilihan Style:</strong> Memberikan ide-ide pendekatan visual yang bervariasi (mulai dari Dark Luxury, Light Clean/Editorial, hingga Neo-Brutalism).</li>
+                    <li><strong>Penulisan Sintaks SVG & CSS Modern:</strong> Membantu menuliskan sintaks SVG ikon agar ringan serta rumus CSS modern seperti <code>clamp()</code> untuk tipografi responsif dan CSS Grid.</li>
+                </ul>
+            </div>
+
+            <div class="doc-block">
+                <h3 class="doc-block-title">2. Bagian yang Diputuskan / Dimodifikasi Sendiri:</h3>
+                <ul class="doc-list">
+                    <li><strong>Pemilihan Konsep Akhir & Arah Visual:</strong> Menentukan gaya desain mana yang paling cocok dengan target audiens kursus sertifikasi grafologi agar tidak terlalu gelap/berat, tetapi tetap terkesan profesional dan terpercaya.</li>
+                    <li><strong>Penyempurnaan Copywriting & Hierarki Teks:</strong> Menyesuaikan kembali headline dan sub-headline agar poin utamanya (Sertifikasi CHA, 100+ Traits, dan manfaat karier) langsung terlihat jelas saat pertama kali halaman dibuka.</li>
+                    <li><strong>Penyesuaian Skema Warna & Tipografi:</strong> Memilih perpaduan font (seperti Inter untuk keterbacaan dan Newsreader/Italic untuk aksen) serta mengatur kontras warna agar nyaman dibaca di berbagai ukuran layar.</li>
+                </ul>
+            </div>
+
+            <div class="doc-block">
+                <h3 class="doc-block-title">3. Alasan / Keputusan (Kenapa):</h3>
+                <ul class="doc-list">
+                    <li><strong>Kejelasan Pesan (Clarity First):</strong> Sebuah landing page sertifikasi harus membangun rasa percaya (trust) dengan cepat. Oleh karena itu, tata letak dibuat clean dengan banyak whitespace agar pengunjung fokus pada nilai utama program tanpa terdistraksi dekorasi yang berlebihan.</li>
+                    <li><strong>Aksesibilitas & Keterbacaan (UX):</strong> Pemilihan kontras warna yang tinggi dan penggunaan font yang legibel memastikan halaman dapat diakses dengan nyaman baik di perangkat seluler (mobile) maupun desktop.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
